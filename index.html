@@ -39,10 +39,10 @@
     </div>
     <div class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#home" class="smothscroll">Home</a></li>
-        <li><a href="#desc" class="smothscroll">Description</a></li>
-        <li><a href="#showcase" class="smothScroll">Showcase</a></li>
-        <li><a href="#contact" class="smothScroll">Contact</a></li>
+        <li class="active"><a href="#home" class="smothscroll">Inicio</a></li>
+        <li><a href="#desc" class="smothscroll">Descripción</a></li>
+        <li><a href="#features" class="smothScroll">Ventajas</a></li>
+        <li><a href="#contact" class="smothScroll">Quiero Invertir</a></li>
       </ul>
     </div><!--/.nav-collapse -->
   </div>
@@ -107,6 +107,7 @@
   </div> <!--/ .container -->
 </div><!--/ #introwrap -->
 
+<section id="features" name="features"></section>
 <!-- FEATURES WRAP -->
 <div id="features">
   <div class="container">
@@ -184,47 +185,13 @@
   </div><!--/ .container -->
 </div><!--/ #features -->
 
-
-<section id="showcase" name="showcase"></section>
-<div id="showcase">
-  <div class="container">
-    <div class="row">
-      <h1 class="centered">Nuestra plataforma</h1>
-      <br>
-      <div class="col-lg-8 col-lg-offset-2">
-        <div id="carousel-example-generic" class="carousel slide">
-          <!-- Indicators -->
-          <ol class="carousel-indicators">
-            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-          </ol>
-
-          <!-- Wrapper for slides -->
-          <div class="carousel-inner">
-            <div class="item active">
-              <img src="assets/img/item-01.png" alt="">
-            </div>
-            <div class="item">
-              <img src="assets/img/item-02.png" alt="">
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <br>
-    <br>
-    <br>
-  </div><!-- /container -->
-</div>
-
-
 <section id="contact" name="contact"></section>
 <div id="footerwrap">
   <div class="container">
     <div class="col-lg-5">
       <h3>HQ</h3>
       <p>
-        Arrayán 7073,<br/>
+        Arrayán 2073,<br/>
         Providencia,<br/>
         Santiago<br/>
         Chile
@@ -232,7 +199,7 @@
     </div>
 
     <div class="col-lg-7">
-      <h3>Contáctenos</h3>
+      <h3>Invierte con Nosotros</h3>
       <br>
       <form role="form" action="#" method="post" enctype="plain">
         <div class="form-group">
@@ -244,8 +211,23 @@
           <input type="email" name="Mail" class="form-control" id="email1" placeholder="Ingrese email">
         </div>
         <div class="form-group">
-          <label>Texto</label>
-          <textarea class="form-control" name="Message" rows="3"></textarea>
+          <label for="amount1">Monto Estimado</label>
+          <input type="number" name="Amount" class="form-control" id="amount1" placeholder="Ingrese monto a invertir">
+        </div>
+        <div class="form-group">
+          <label for="time1">Plazo Estimado</label>
+          <select name="time" class="form-control" id="time1">
+            <option>No sé</option>
+            <option>Menos de 2 Meses</option>
+            <option>De 2 a 6 Meses </option>
+            <option>De 6 Meses a 1 Año</option>
+            <option>De 1 a 5 Años</option>
+            <option>Más de 5 Años</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Comentarios</label>
+          <textarea class="form-control" name="Message" rows="3" placeholder="Ingrese algún comentario (opcional)"></textarea>
         </div>
         <br>
         <button type="submit" class="btn btn-large btn-success">ENVIAR</button>
