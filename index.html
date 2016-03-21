@@ -20,6 +20,7 @@
 
   <script src="assets/js/jquery.min.js"></script>
   <script src="assets/js/smoothscroll.js"></script>
+  <script src="assets/js/form-sender.js"></script>
 
 
 </head>
@@ -204,7 +205,7 @@
     <div class="col-lg-7">
       <h3>Invierte con Nosotros</h3>
       <br>
-      <form role="form" action="#" method="post" enctype="plain">
+      <form role="form" id="subscription-form" action="#" method="post" enctype="plain">
         <div class="form-group">
           <label for="name1">Nombre</label>
           <input type="name" name="Name" class="form-control" id="name1" placeholder="Nombre">
@@ -222,15 +223,15 @@
           <select name="time" class="form-control" id="time1">
             <option>No sé</option>
             <option>Menos de 2 Meses</option>
-            <option>De 2 a 6 Meses </option>
+            <option>De 2 a 6 Meses</option>
             <option>De 6 Meses a 1 Año</option>
             <option>De 1 a 5 Años</option>
             <option>Más de 5 Años</option>
           </select>
         </div>
         <div class="form-group">
-          <label>Comentarios</label>
-          <textarea class="form-control" name="Message" rows="3" placeholder="Ingrese algún comentario (opcional)"></textarea>
+          <label for="comment1">Comentarios</label>
+          <textarea class="form-control" name="Message" rows="3" id="comment1" placeholder="Ingrese algún comentario (opcional)"></textarea>
         </div>
         <br>
         <button type="submit" class="btn btn-large btn-success">ENVIAR</button>
