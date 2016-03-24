@@ -18,10 +18,11 @@
   <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
 
-  <script src="assets/js/jquery.min.js"></script>
-  <script src="assets/js/smoothscroll.js"></script>
-  <script src="assets/js/form-sender.js"></script>
+  <script src="assets/js/lib/jquery.min.js"></script>
+  <script src="assets/js/lib/smoothscroll.js"></script>
+  <script src="assets/js/lib/jquery.bsFormAlerts.min.js"></script>
 
+  <script src="assets/js/form-sender.js"></script>
 
 </head>
 
@@ -251,18 +252,21 @@
     <div class="col-lg-7">
       <h3>Invierte con Nosotros</h3>
       <br>
-      <form role="form" id="subscription-form" action="#" method="post" enctype="plain">
+      <form role="form" id="subscription-form" action="#" method="post" enctype="plain" novalidate>
         <div class="form-group">
-          <label for="name1">Nombre</label>
+          <label for="name1">Nombre *</label>
           <input type="name" name="Name" class="form-control" id="name1" placeholder="Nombre">
+          <span data-alertid="name"></span>
         </div>
         <div class="form-group">
-          <label for="email1">Email</label>
-          <input type="email" name="Mail" class="form-control" id="email1" placeholder="Ingrese email">
+          <label for="email1">Email *</label>
+          <input type="email" name="Mail" class="form-control" id="email1" placeholder="Ingrese email" >
+          <span data-alertid="email"></span>
         </div>
         <div class="form-group">
           <label for="amount1">Monto Estimado</label>
-          <input type="number" name="Amount" class="form-control" id="amount1" placeholder="Ingrese monto a invertir">
+          <input type="number" name="Amount" class="form-control" id="amount1" placeholder="Monto estimado a invertir (opcional)">
+          <span data-alertid="amount"></span>
         </div>
         <div class="form-group">
           <label for="time1">Plazo Estimado</label>
@@ -277,7 +281,7 @@
         </div>
         <div class="form-group">
           <label for="comment1">Comentarios</label>
-          <textarea class="form-control" name="Message" rows="3" id="comment1" placeholder="Ingrese algún comentario (opcional)"></textarea>
+          <textarea class="form-control" name="Message" rows="3" id="comment1" placeholder="Comentarios adicionales (opcional)"></textarea>
         </div>
         <br>
         <button type="submit" class="btn btn-large btn-success">ENVIAR</button>
@@ -288,7 +292,7 @@
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<script src="assets/js/bootstrap.js"></script>
+<script src="assets/js/lib/bootstrap.js"></script>
 <script>
   $('.carousel').carousel({
     interval: 3500
