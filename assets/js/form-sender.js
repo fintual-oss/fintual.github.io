@@ -1,11 +1,11 @@
 const DEFAULT_AMOUNT_VALUE = -1;
-var amountValue = DEFAULT_AMOUNT_VALUE;
+var amountValue;
 
 $(document).ready(function(){
   $('#subscription-form').submit(function(event) {
     event.preventDefault(event);
     if(inputIsValid()) {
-      setAmountValueIfNull();
+      loadAmountValueFromForm();
       sendFormData();
     }
   });
@@ -68,14 +68,14 @@ function checkAmountValidityAndDisplayMessage() {
   return true;
 }
 
-function setAmountValueIfNull(){
+function loadAmountValueFromForm(){
+  amountValue = DEFAULT_AMOUNT_VALUE;
   if($('#amount1').val()){
-    amountValue = $('#amount1').val()
+    amountValue = $('#amount1').val();
   }
 }
 
 function sendFormData() {
-
   $.ajax({
     url: 'https://api.airtable.com/v0/appOpQ8GCbqjZ2Rl9/Inscritos',
     beforeSend: function(xhr) {
@@ -101,7 +101,6 @@ function sendFormData() {
       console.log(error);
       alert('Error al enviar los datos, intente nuevamente.')
     }
-
   });
 }
 
