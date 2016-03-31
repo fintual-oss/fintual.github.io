@@ -135,6 +135,11 @@ a:after {
 	text-align: left;
 }
 
+#footerwrap h1 {
+    color: white;
+}
+
+
 #footerwrap h3 {
 	font-size: 28px;
 	color: white;
