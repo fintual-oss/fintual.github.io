@@ -94,12 +94,31 @@ function sendFormData() {
     '}}',
     dataType: 'json',
     success: function() {
-      alert('Datos enviados exitosamente.');
+      BootstrapDialog.show({
+        title: 'Éxito',
+        message: 'Datos enviados exitosamente.',
+        buttons: [{
+          label: 'OK',
+          action: function (dialog) {
+            dialog.close();
+          }
+        }]
+      });
       deleteFormData();
     },
     error: function(error) {
       console.log(error);
-      alert('Error al enviar los datos, intente nuevamente.')
+      BootstrapDialog.show({
+        title: 'Error',
+        message: 'Error al enviar los datos, por favor intenta nuevamente. Cualquier duda o problema, envíanos un ' +
+        'correo a hola@fininci.com.',
+        buttons: [{
+          label: 'OK',
+          action: function (dialog) {
+            dialog.close();
+          }
+        }]
+      });
     }
   });
 }

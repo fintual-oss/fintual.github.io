@@ -65,6 +65,18 @@ a:after {
     padding: 0;
 }
 
+.bootstrap-dialog-title {
+    font-size: 20px !important;
+}
+
+.bootstrap-dialog-message {
+    font-size: 18px !important;
+}
+
+.modal-header {
+    background-color: #3B6A94 !important;
+}
+
 
 /* ==========================================================================
    Wrap Sections
